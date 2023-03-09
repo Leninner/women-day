@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #222;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+.ticket {
+  box-shadow: 0 0 50px rgba(0, 0, 0, .4);
+  width: 600px;
+  border-radius: 5px;
+  position: relative;
+  aspect-ratio: 18/9;
+}
+
+.wrapper {
+  perspective:  1000px;
+}
+
+.bg {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  inset: 0;
+  filter: blur(20px);
+  z-index: -1;
+}
