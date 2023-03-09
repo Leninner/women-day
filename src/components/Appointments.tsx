@@ -86,7 +86,7 @@ export const Appointments = () => {
     <section className="flex justify-center flex-col items-center my-10 mb-20">
       <h1 className='text-center font-bold text-2xl text-white'>Puedes elegir una cita, varias o todas a continuación</h1>
       
-      <div>
+      <div className="flex flex-col items-center md:block">
         {
           appointments.map((appointment, index) => (
             <Card key={index} {...appointment} />

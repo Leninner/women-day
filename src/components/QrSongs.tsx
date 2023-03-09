@@ -32,9 +32,11 @@ export const QrSongs = () => {
 
   return (
     <section className="my-48 flex flex-col items-center">
-      <h1 className="text-2xl font-bold text-white my-4">¿Quiéres escuchar música que me gusta y que pienso que te gusta a ti?</h1>
+      <h1 className="text-2xl font-bold text-white my-4 px-3">
+        ¿Quiéres escuchar música que me gusta y que pienso que te gusta a ti?
+      </h1>
 
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-3 justify-center">
         {
           songs.map((song, index) => {
             return (
@@ -54,7 +56,7 @@ interface QrSong {
 
 const QrSong = (props: QrSong) => {
   return (
-    <div className="text-white w-44">
+    <div className="text-white md:w-44 w-36">
       <a href="www.qr-code-generator.com/" rel="nofollow">
         <img src={props.url} />
       </a>

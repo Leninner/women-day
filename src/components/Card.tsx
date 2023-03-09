@@ -27,6 +27,8 @@ export const Card = (props: AppointmentProps) => {
     const wrapperWidth = document.body.getBoundingClientRect().width
     const wrapperHeight = document.body.getBoundingClientRect().height
 
+    if(wrapperWidth < 768) return
+
     window.addEventListener('mousemove', (e) => {
       const { pageX, pageY } = e
       const halfWidth = wrapperWidth! / 2
@@ -40,9 +42,9 @@ export const Card = (props: AppointmentProps) => {
   }, [])
 
   return (
-    <div className="container my-20">
+    <div className="md:container my-20 md:w-full w-[85%]">
       <div className="wrapper">
-        <article className={`flex flex-col justify-between items-start w-[800px] p-4 shadow-2xl shadow-neutral-700 aspect-[18/9] relative rounded-md ${gradientStyle}`} ref={ticket}>
+        <article className={`w-[100%] flex flex-col justify-between md:items-start md:w-[800px] p-4 shadow-2xl shadow-neutral-700 aspect-[18/9] relative rounded-md ${gradientStyle}`} ref={ticket}>
           <div>
             <h4 className="absolute top-0 right-0 p-4 font-black text-lg opacity-90 font-mono">#{code}</h4>
 

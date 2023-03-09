@@ -1,6 +1,6 @@
 export const StepGreeting = () => {
   return (
-    <section className="container h-screen text-xl">
+    <section className="container h-screen text-xl px-5">
       <h1 className="font-bold text-3xl text-white">Hola bonita!</h1>
       <p className="text-gray-400">
         Gracias por estar aquí, <span className="text-red-400">te quiero mucho</span> y espero que te guste este regalo curioso.
